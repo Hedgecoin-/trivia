@@ -1,34 +1,70 @@
 import React, { Component } from 'react';
-import { ListGroupItem, Badge, Row, Col, Button, Glyphicon } from 'react-bootstrap';
+import { Badge, Button, Fa } from 'mdbreact';
 
 class Player extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      hovered: false,
+    }
+  }
+
+  handleMouseEnter = () => {
+    this.setState({ hovered: true });
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ hovered: false });
+  }
+
   render(){
+    const { hovered } = this.state;
+
+    let rowStyle = hovered ? style.hovered: {};
+
+    let scoreColor = "info";
+    if(this.props.score > 0){
+      scoreColor = "primary";
+    }
+    else if(this.props.score < 0){
+      scoreColor = "secondary";
+    }
+
     return (
-      <ListGroupItem>
-        <Row>
-          <Col md={1}>
-            <Badge pullRight={true} style={{ fontSize: "20px", marginTop: '1px' }}>{this.props.score}</Badge>
-          </Col>
-          <Col md={5}>
-            <span style={{ fontSize: "20px"}}>
-              {this.props.name}
-            </span>
-          </Col>
-          <Col mdOffset={2} md={1}>
-            <Button bsStyle="success" onClick={this.props.addPoint}>+1</Button>
-          </Col>
-          <Col md={1}>
-            <Button bsStyle="danger" onClick={this.props.losePoint}>-1</Button>
-          </Col>
-          <Col md={1} />
-          <Col md={1}>
-            <div className="h">
-              <Glyphicon style={{ fontSize: 'large', marginTop: '9px', color: '#7d8b98' }} glyph="trash" onClick={this.props.remove}/>
-            </div>
-          </Col>
-        </Row>
-      </ListGroupItem>
+      <div className="row" style={rowStyle} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+        <div className="col-1" style={style.nameCol}>
+          <Badge color={scoreColor}>{this.props.score}</Badge>
+        </div>
+        <div className="col-5" style={style.nameCol}>
+          <span style={{ fontSize: "20px"}}>
+            {this.props.name}
+          </span>
+        </div>
+        <div className="col-2"></div>
+        <div className="col-1">
+          <Button tag="a" size="sm" floating color="success" onClick={this.props.addPoint}><Fa icon="check" /></Button>
+        </div>
+        <div className="col-1">
+          <Button tag="a" size="sm" floating color="danger" onClick={this.props.losePoint}><Fa icon="times" /></Button>
+        </div>
+        <div className="col-1" />
+        <div className="col-1">
+          <Button tag="a" size="sm" floating color="elegant" onClick={this.props.remove}><Fa icon="trash" /></Button>
+        </div>
+      </div>
     )
+  }
+}
+
+
+const style = {
+  hovered: {
+    boxShadow: "0px 2px 5px rgba(0,0,0,0.15)",
+  },
+  nameCol: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
   }
 }
 

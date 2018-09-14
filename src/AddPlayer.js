@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Form, FormGroup, FormControl, Button, Col } from 'react-bootstrap';
+import { Button, Input } from 'mdbreact';
 
 class AddPlayer extends Component {
   constructor(props){
@@ -22,16 +22,14 @@ class AddPlayer extends Component {
 
   render(){
     return (
-      <Form horizontal>
-        <FormGroup >
-          <Col md={4}>
-            <FormControl type="text" value={this.state.value} placeholder="Player name" onChange={this.handleChange} />
-          </Col>
-          <Col md={4}>
-            <Button onClick={this.handleClick}>Add Player</Button>
-          </Col>
-        </FormGroup>
-      </Form>
+      <div className="row">
+        <div className="col">
+          <Input value={this.state.value} label="Player name" icon="user" onChange={this.handleChange} />
+        </div>
+        <div className="col">
+          <Button color="elegant" onClick={this.handleClick}>Add Player</Button>
+        </div>
+      </div>
     )
   }
 }

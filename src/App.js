@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Jumbotron, ListGroup} from 'react-bootstrap';
+import { ListGroup } from 'mdbreact';
 
 import AddPlayer from './AddPlayer.js';
 import Player from './Player.js';
@@ -77,29 +77,32 @@ class App extends Component {
     let playerlist = [];
     for(let i=0; i < players.length; i++){
       let player = players[i];
+      let pointGain = 2;
+      let pointLoss = -1;
+
+      if(player.name == "Steve" || player.name == "Alain"){
+        pointGain = 1;
+      }
+
       playerlist.push(
         <Player key={i} score={player.score} name={player.name}
-          addPoint={() => this.modifyScore(player.name, 1) }
-          losePoint={() => this.modifyScore(player.name, -1) }
+          addPoint={() => this.modifyScore(player.name, pointGain) }
+          losePoint={() => this.modifyScore(player.name, pointLoss) }
           remove={ () => this.removePlayer(player.name) }
         />
       );
     }
 
     return (
-      <Grid>
-        <Row>
-          <AddPlayer addPlayer={this.addPlayer} />
-        </Row>
-        <Row>
-          <Jumbotron>
-            <h1>Trivia Score</h1>
-            <ListGroup>
-              {playerlist}
-            </ListGroup>
-          </Jumbotron>
-        </Row>
-      </Grid>
+      <div className="container">
+        <AddPlayer addPlayer={this.addPlayer} />
+        <div className="row">
+          <h1>Trivia Score</h1>
+        </div>
+        <ListGroup>
+          {playerlist}
+        </ListGroup>
+      </div>
     );
   }
 }
@@ -109,18 +112,6 @@ class App extends Component {
 let defaultPlayers = [
   {
     name: 'Tom',
-    score: 0,
-  },
-  {
-    name: 'Alex T',
-    score: 0,
-  },
-  {
-    name: 'Mark',
-    score: 0,
-  },
-  {
-    name: 'Shanel',
     score: 0,
   },
   {
@@ -136,10 +127,6 @@ let defaultPlayers = [
     score: 0,
   },
   {
-    name: 'Paul',
-    score: 0,
-  },
-  {
     name: 'Alain',
     score: 0,
   },
@@ -150,7 +137,24 @@ let defaultPlayers = [
   {
     name: 'Brian',
     score: 0,
-  }
+  },
+  {
+    name: 'Matt',
+    score: 0,
+  },
+  {
+    name: 'Yannick',
+    score: 0,
+  },
+  {
+    name: 'Dicong',
+    score: 0,
+  },
+  {
+    name: 'Jacques',
+    score: 0,
+  },
+
 ]
 
 
