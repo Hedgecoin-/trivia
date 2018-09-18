@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { ListGroup } from 'mdbreact';
+
+import { ButtonFixed } from 'mdbreact';
 
 import AddPlayer from './AddPlayer.js';
 import Player from './Player.js';
@@ -10,6 +11,10 @@ class App extends Component {
     this.state = {
       players: defaultPlayers,
     }
+  }
+
+  componentDidMount(){
+    this.sortPlayers();
   }
 
   addPlayer = (name) => {
@@ -55,11 +60,10 @@ class App extends Component {
     this.setState({ players: newPlayerList });
   }
 
-
-  render() {
+  sortPlayers = () => {
     const { players } = this.state;
 
-    players.sort((a, b) => {
+    const sortedPlayers = [].concat(players).sort((a, b) => {
       if(a.score === b.score){
         let an = a.name.toLowerCase();
         let bn = b.name.toLowerCase();
@@ -74,13 +78,34 @@ class App extends Component {
       return b.score - a.score;
     });
 
+    this.setState({ players: sortedPlayers });
+  }
+
+  renderPlayers = () => {
+    const { players } = this.state;
+
+    // players.sort((a, b) => {
+    //   if(a.score === b.score){
+    //     let an = a.name.toLowerCase();
+    //     let bn = b.name.toLowerCase();
+    //     if(an < bn){
+    //       return -1;
+    //     }
+    //     if(an > bn){
+    //       return 1;
+    //     }
+    //     return 0;
+    //   }
+    //   return b.score - a.score;
+    // });
+
     let playerlist = [];
     for(let i=0; i < players.length; i++){
       let player = players[i];
       let pointGain = 2;
       let pointLoss = -1;
 
-      if(player.name == "Steve" || player.name == "Alain"){
+      if(player.name === "Steve" || player.name === "Alain"){
         pointGain = 1;
       }
 
@@ -93,20 +118,24 @@ class App extends Component {
       );
     }
 
+    return playerlist;
+  }
+
+
+  render() {
+
     return (
       <div className="container">
         <AddPlayer addPlayer={this.addPlayer} />
+        <ButtonFixed floating size="lg" color="red" icon="random" onClick={this.sortPlayers} />
         <div className="row">
           <h1>Trivia Score</h1>
         </div>
-        <ListGroup>
-          {playerlist}
-        </ListGroup>
+        {this.renderPlayers()}
       </div>
     );
   }
 }
-
 
 
 let defaultPlayers = [
