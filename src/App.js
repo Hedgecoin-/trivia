@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
-import { ButtonFixed } from 'mdbreact';
+import { Container, ButtonFixed } from 'mdbreact';
 
+import Board from './Board.js';
 import AddPlayer from './AddPlayer.js';
 import Player from './Player.js';
+
+import { defaultData } from './defaultData';
 
 class App extends Component {
   constructor(props){
@@ -122,8 +125,7 @@ class App extends Component {
   }
 
 
-  render() {
-
+  renderOld() {
     return (
       <div className="container">
         <AddPlayer addPlayer={this.addPlayer} />
@@ -134,6 +136,15 @@ class App extends Component {
         {this.renderPlayers()}
       </div>
     );
+  }
+
+
+  render() {
+    return (
+      <Container fluid>
+        <Board categories={defaultData.categories} />
+      </Container>
+    )
   }
 }
 
