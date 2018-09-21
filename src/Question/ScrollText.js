@@ -41,7 +41,7 @@ class ScrollText extends Component {
     let textToShow = text.substr(0, scrollLength);
 
     return (
-      <div style={{ height: '250px'}}>
+      <div style={{ minHeight: '250px', fontSize: '24px'}}>
         {textToShow}
       </div>
     )

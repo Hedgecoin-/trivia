@@ -51,6 +51,12 @@ class PlayerStore {
 
   addPlayer(player){
     let newPlayer = new Player(player);
+    for(let i=0; i<this.players.length; i++){
+      let player = this.players[i];
+      if(player.name === newPlayer.name){        
+        return;
+      }
+    }
     this.players.push(newPlayer);
   }
 

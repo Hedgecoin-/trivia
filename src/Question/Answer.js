@@ -16,7 +16,7 @@ class Answer extends Component {
       <div className="text-center" style={styles}>
         <Button color="primary" onClick={this.toggle}>Show Answer</Button>
         <Collapse isOpen={this.state.collapse}>
-          <div style={{ fontWeight: 'bold' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '24px' }}>
             {answer}
           </div>
         </Collapse>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'mdbreact';
+import { Card, CardBody, Container, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'mdbreact';
 
 import QuestionBody from './QuestionBody';
 import PlayerStore from '../Player/PlayerStore.js';
@@ -7,6 +7,7 @@ import PlayerStore from '../Player/PlayerStore.js';
 class Question extends Component {
   state = {
     modal: false,
+    answered: false,
   }
 
   toggle = () => {
@@ -15,16 +16,27 @@ class Question extends Component {
 
   completeRound = () => {
     PlayerStore.completeRound();
-    this.setState({ modal: false });
+    this.setState({ modal: false, answered: true });
   }
 
   render(){
-    const { modal } = this.state;
+    const { modal, answered } = this.state;
     const { front, back, categoryName } = this.props;
+
+    let questionColor = 'indigo';
+    if(answered){
+      questionColor = 'mdb-color lighten-2';
+    }
 
     return (
       <Container>
-        <Button onClick={this.toggle}>{front}</Button>
+        <Card color={questionColor} onClick={this.toggle} text='white' className='text-center' style={{ marginTop: '15px', cursor: '' }}>
+          <CardBody>
+            <div style={{fontSize: '24px'}}>
+              {front}
+            </div>
+          </CardBody>
+        </Card>
         <Modal isOpen={modal} toggle={this.toggle} size="fluid">
           <ModalHeader toggle={this.toggle}>{categoryName}</ModalHeader>
           <ModalBody>

@@ -37,7 +37,7 @@ class PlayerScoreList extends Component {
     });
 
     return (
-      <ListGroup>
+      <ListGroup style={{ marginTop: '150px'}}>
         {sortedPlayers.map(p => {
           return <PlayerScoreItem key={p.name} name={p.name} score={p.score} />
         })}
