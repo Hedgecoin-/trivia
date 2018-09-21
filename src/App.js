@@ -5,8 +5,9 @@ import { Container, ButtonFixed } from 'mdbreact';
 import Board from './Board.js';
 import AddPlayer from './AddPlayer.js';
 import Player from './Player.js';
+import PlayerStore from './Player/PlayerStore.js';
 
-import { defaultData } from './defaultData';
+import { defaultData, defaultPlayers } from './defaultData';
 
 class App extends Component {
   constructor(props){
@@ -18,6 +19,11 @@ class App extends Component {
 
   componentDidMount(){
     this.sortPlayers();
+
+    for(let i=0; i < defaultData.players.length; i++){
+      let player = defaultData.players[i];
+      PlayerStore.addPlayer(player);
+    }
   }
 
   addPlayer = (name) => {
@@ -124,21 +130,6 @@ class App extends Component {
     return playerlist;
   }
 
-
-  renderOld() {
-    return (
-      <div className="container">
-        <AddPlayer addPlayer={this.addPlayer} />
-        <ButtonFixed floating size="lg" color="red" icon="random" onClick={this.sortPlayers} />
-        <div className="row">
-          <h1>Trivia Score</h1>
-        </div>
-        {this.renderPlayers()}
-      </div>
-    );
-  }
-
-
   render() {
     return (
       <Container fluid>
@@ -147,55 +138,5 @@ class App extends Component {
     )
   }
 }
-
-
-let defaultPlayers = [
-  {
-    name: 'Tom',
-    score: 0,
-  },
-  {
-    name: 'Nabeel',
-    score: 0,
-  },
-  {
-    name: 'Simone',
-    score: 0,
-  },
-  {
-    name: 'Steve',
-    score: 0,
-  },
-  {
-    name: 'Alain',
-    score: 0,
-  },
-  {
-    name: 'Bruce',
-    score: 0,
-  },
-  {
-    name: 'Brian',
-    score: 0,
-  },
-  {
-    name: 'Matt',
-    score: 0,
-  },
-  {
-    name: 'Yannick',
-    score: 0,
-  },
-  {
-    name: 'Dicong',
-    score: 0,
-  },
-  {
-    name: 'Jacques',
-    score: 0,
-  },
-
-]
-
 
 export default App;

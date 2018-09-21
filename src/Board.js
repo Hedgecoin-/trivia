@@ -10,7 +10,7 @@ class Board extends Component {
     const { categories } = this.props;
 
     return categories.map((data, i) => {
-      return <Category key={i} title={data.title} />
+      return <Category key={i} title={data.title} questions={data.questions} />
     })
   }
 
