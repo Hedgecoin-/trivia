@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import { Container, ButtonFixed } from 'mdbreact';
+import { Container, ButtonFixed, Row, Col } from 'mdbreact';
 
 import Board from './Board.js';
 import AddPlayer from './AddPlayer.js';
 import Player from './Player.js';
 import PlayerStore from './Player/PlayerStore.js';
+import PlayerScoreList from './Player/PlayerScoreList.js';
 
 import { defaultData, defaultPlayers } from './defaultData';
 
@@ -133,7 +134,15 @@ class App extends Component {
   render() {
     return (
       <Container fluid>
-        <Board categories={defaultData.categories} />
+        <Row>
+          <Col md={'10'}>
+            <Board categories={defaultData.categories} />
+          </Col>
+          <Col md={'2'}>
+            <PlayerScoreList playerList={PlayerStore.players}/>
+          </Col>
+
+        </Row>
       </Container>
     )
   }
