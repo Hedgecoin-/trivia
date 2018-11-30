@@ -38,6 +38,10 @@ export const defaultQuestions = [
 
 export const defaultPlayers = [
   {
+    name: 'Alex',
+    score: 0,
+  },
+  {
     name: 'Tom',
     score: 0,
   },
