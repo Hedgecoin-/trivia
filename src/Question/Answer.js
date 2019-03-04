@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button , Collapse } from 'mdbreact';
+import { Button, Collapse } from 'mdbreact';
 
 class Answer extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Answer extends Component {
   }
 
   toggle = () => {
-    this.setState({ collapse : !this.state.collapse });
+    this.setState({ collapse: !this.state.collapse });
   }
 
   showMultipleAnswers = (e) => {
@@ -35,16 +35,16 @@ class Answer extends Component {
         show: true,
       };
     }
-    
+
     this.setState({ shownAnswers: newShownAnswers });
-    
+
   }
 
-  componentDidMount(){
+  componentDidMount() {
     window.addEventListener('keydown', this.showMultipleAnswers);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     window.removeEventListener('keydown', this.showMultipleAnswers);
   }
 
@@ -52,26 +52,27 @@ class Answer extends Component {
     const { shownAnswers } = this.state;
     const { answer, multiple } = this.props;
 
-    
+
 
     let answerText;
     if (multiple) {
       let guessedAnswers = [];
-      for(let key in shownAnswers){
+      for (let key in shownAnswers) {
         if (shownAnswers[key].show) {
           guessedAnswers.push(shownAnswers[key].text);
         }
       }
-      
+
       let remainingAnswers = [];
       answerLoop:
-      for (let i = 0; i < answer.length; i++){
-        for (let j = 0; j < guessedAnswers.length; j++){
+      for (let i = 0; i < answer.length; i++) {
+        for (let j = 0; j < guessedAnswers.length; j++) {
           if (answer[i] === guessedAnswers[j]) {
+            remainingAnswers.push(`[-] ${answer[i]}`);
             continue answerLoop;
           }
         }
-        remainingAnswers.push(`[${i+1}] ${answer[i]}`);
+        remainingAnswers.push(`[${i + 1}] ${answer[i]}`);
       }
 
       answerText = guessedAnswers.join(', ');
