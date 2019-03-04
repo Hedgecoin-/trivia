@@ -6,7 +6,7 @@ class ScrollText extends Component {
     scrolling: false,
   }
 
-  componentDidMount(){
+  componentDidMount() {
     window.addEventListener('keydown', this.toggleScroll);
   }
 

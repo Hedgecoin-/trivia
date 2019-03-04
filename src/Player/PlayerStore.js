@@ -19,7 +19,7 @@ class PlayerStore {
     this.roundStatus = [];
   }
 
-  setRoundStatus(name, points){
+  setRoundStatus(name, points, multiple = false){
     // update
     for(let i=0; i < this.roundStatus.length; i++){
       let status = this.roundStatus[i];
@@ -28,6 +28,7 @@ class PlayerStore {
         this.roundStatus[i] = {
           name: name,
           points: points,
+          multiple: multiple,
         }
         return;
       }
@@ -38,13 +39,25 @@ class PlayerStore {
     this.roundStatus.push({
       name: name,
       points: points,
+      multiple: multiple,
     });
   }
 
-  completeRound(){
+  completeRound() {
+    let multipleWinner = true;
     for(let i=0; i < this.roundStatus.length; i++){
       let status = this.roundStatus[i];
-      this.addPointsByName(status.name, status.points);
+      if(status.multiple && multipleWinner) {
+        this.addPointsByName(status.name, status.points * 2);
+
+        if (status.points > 0) {
+          multipleWinner = false;
+        }
+      }
+      else {
+        this.addPointsByName(status.name, status.points);
+      }
+
     }
     this.roundStatus = [];
   }
@@ -63,7 +76,8 @@ class PlayerStore {
   addPointsByName(name, points){
     for(let i=0; i<this.players.length; i++){
       let player = this.players[i];
-      if(player.name === name){
+      if (player.name === name) {
+        console.log(`Modifying ${player.name} score by ${points}`);
         player.score = player.score + points;
         return;
       }

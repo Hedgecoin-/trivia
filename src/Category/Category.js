@@ -11,7 +11,7 @@ class Category extends Component {
       <Col>
         <CategoryHeader title={title} />
         {questions.map(q => {
-          return <Question key={q.front} front={q.front} back={q.back} categoryName={title} />
+          return <Question key={q.front} front={q.front} back={q.back} multiple={q.multiple} categoryName={title} />
         })}
       </Col>
     )

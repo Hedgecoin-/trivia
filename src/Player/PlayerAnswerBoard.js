@@ -10,7 +10,7 @@ function PlayerAnswerBoard (props) {
     <ListGroup>
       {
         playerList.map(player => {
-          return <PlayerAnswer key={player.name} name={player.name} />
+          return <PlayerAnswer key={player.name} name={player.name} multiple={props.multiple} />
         })
       }
     </ListGroup>

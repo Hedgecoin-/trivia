@@ -21,7 +21,7 @@ class Question extends Component {
 
   render(){
     const { modal, answered } = this.state;
-    const { front, back, categoryName } = this.props;
+    const { front, back, categoryName, multiple } = this.props;
 
     let questionColor = 'indigo';
     if(answered){
@@ -30,7 +30,7 @@ class Question extends Component {
 
     return (
       <Container>
-        <Card color={questionColor} onClick={this.toggle} text='white' className='text-center' style={{ marginTop: '15px', cursor: '' }}>
+        <Card color={questionColor} onClick={this.toggle} text='white' className='text-center' style={{ marginTop: '15px', cursor: 'pointer' }}>
           <CardBody>
             <div style={{fontSize: '24px'}}>
               {front}
@@ -40,7 +40,7 @@ class Question extends Component {
         <Modal isOpen={modal} toggle={this.toggle} size="fluid">
           <ModalHeader toggle={this.toggle}>{categoryName}</ModalHeader>
           <ModalBody>
-            <QuestionBody text={back.text} answer={back.answer} />
+            <QuestionBody text={back.text} answer={back.answer} multiple={multiple} />
           </ModalBody>
           <ModalFooter>
             <Button color="secondary" onClick={this.toggle}>Close</Button>{' '}

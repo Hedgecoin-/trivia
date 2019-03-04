@@ -51,258 +51,305 @@ export const realData = {
       ]
     },
     {
-      title: "Meow Meow",
+      title: "Sci-Fi Flicks",
       questions: [
         {
           front: 100,
           back: {
-            text: "What Hogwarts student owned the cat named Crookshanks, who made its first appearance on film in the 2004 movie Harry Potter and the Prisoner of Azkaban?",
-            answer: "Hermione Granger"
+            text: "In what 2012 time-travel thriller, starring Bruce Willis and Emily Blunt, are mob targets disposed of 30 years in the past?",
+            answer: "Looper"
           }
         },
         {
           front: 200,
           back: {
-            text: "What is the name of the white cat owned by Angela Martin on The Office, which Dwight unfortunately sent to the great beyond in 2007?",
-            answer: "Sprinkles"
+            text: "Which 2013 Matt Damon movie used a Mexico City dump as the filming location for a poverty-plagued Los Angeles of 2154?",
+            answer: "Elysium"
           }
         },
         {
           front: 300,
           back: {
-            text: "What “Shake It Off” pop singer named her two kitties after TV heroines Olivia Benson and Meredith Grey?",
-            answer: "Taylor Swift"
+            text: "Which 2014 film features Matthew McConaughey traveling through a wormhole to find a new home for Earth’s endangered population?",
+            answer: "Interstellar"
           }
         },
         {
           front: 400,
           back: {
-            text: "Which Internet cat meme got even more popular when Stephen Colbert was mocked by the critter on his show in 2009?",
-            answer: "Keyboard Cat"
+            text: "In a bizarre marketing ploy, what 2014 military thriller was repositioned for DVD sales using its tagline, “Live. Die. Repeat.”?",
+            answer: "Edge of Tomorrow"
           }
         },
         {
           front: 500,
           back: {
-            text: "Which feline breed is Mr. Bigglesworth, the hairless cat of Dr. Evil, in the 2002 film Austin Powers in Goldmember?",
-            answer: "Sphynx"
+            text: "What 2014 blockbuster and winner of the Best Visual Effects Oscar begins ten years after the Simian Flu wiped out most humans?",
+            answer: "Dawn of the Planet of the Apes"
           }
         },
         {
           front: 600,
           back: {
-            text: "As of 2013, according to the Humane Society, what was the approximate number of cats in the United States?",
-            answer: "95.6 million cats (83.3 million dogs)"
+            text: "In what 2009 Neill Blomkamp film is Wikus van der Merwe infected with a virus from aliens living in a South African government camp?",
+            answer: "Distric 9"
           }
         },
       ]
     },
     {
-      title: "Company Logos",
+      title: "Reel Books",
       questions: [
         {
           front: 100,
           back: {
-            text: "Which big retailer got rid of the star in its logo but added a giant starburst at the end of its name in 2008?",
-            answer: "Walmart"
+            text: "What 1874 love story by Thomas Hardy was adapted into films starring Carey Mulligan in 2015 and Julie Christie in 1967?",
+            answer: "Far From the Madding Crowd"
           }
         },
         {
           front: 200,
           back: {
-            text: "Which copy service company updated its branding in 2008 by adding a red ball with a stylized X to its logo?",
-            answer: "Xerox"
+            text: "What children’s book about a little girl at New York City’s Plaza Hotel is the subject of a 2015 HBO film short by Lena Dunham of Girls?",
+            answer: "Eloise"
           }
         },
         {
           front: 300,
           back: {
-            text: "Which tool company took out the ampersand in its logo which linked the names of its two founders, and inserted a plus sign instead in 2014?",
-            answer: "Black + Decker"
+            text: "What movie about a finned predator, based on a book by Peter Benchley, celebrated its 40th anniversary in 2015?",
+            answer: "Jaws"
           }
         },
         {
           front: 400,
           back: {
-            text: "Which luxury car company allowed its familiar crest to remain but ditched the laurel wreath for a new logo look in 2014?",
-            answer: "Cadillac"
+            text: "What three-word book title succinctly sums up the 2010 Julia Roberts film about traveling to Italy, India, and Bali to find oneself?",
+            answer: "Eat Pray Love"
           }
         },
         {
           front: 500,
           back: {
-            text: "Which photo-sharing app is identified by a little ghost mascot doodled by its CEO Evan Spiegel in 2011?",
-            answer: "Snapchat"
+            text: "Which sci-fi movie adaptation of a book by Orson Scott Card is about children learning space combat tactics with the catch-phrase 'The enemy's gate is down'?",
+            answer: "Ender’s Game"
           }
         },
         {
           front: 600,
           back: {
-            text: "What color is the letter “Y” in the ebay logo, which was refreshed in 2012 for the first time in 17 years?",
-            answer: "Green"
+            text: "What horror film with fast-running zombies that are able to ladder on top of each other to climb walls is based on a book by Max Brooks",
+            answer: "World War Z"
           }
         },
+      ]
+    },
+    {
+      title: "Reel Books 2",
+      questions: [
         {
           front: 700,
           back: {
-        	text: "What social networking company groomed its blue mascot in 2012 by sharpening its feathers to look more aerodynamic and upturning its beak?",
-        	answer: "Twitter"
+        	text: "What critter is named Richard Parker in The Life of Pi, a novel made into a 2012 film?",
+        	answer: "Tiger"
           }
         },
         {
           front: 800,
           back: {
-          text: "What photo-sharing company’s memorable camera icon inspired Polaroid to make a similar-looking, real-life camera in 2015?",
-          answer: "Instagram"
+          text: "Which character in a Jazz Age novel by F. Scott Fitzgerald was played in a film by Robert Redford in 1974 and Leonardo DiCaprio in 2013?",
+          answer: "Jay Gatsby"
           }
         },
         {
           front: 900,
           back: {
-          text: "What color is the center circle in the iconic logo of Google Chrome, the free Web browser released in 2008?",
-          answer: "Blue"
+          text: "Which NFL football team does Pat Solitano support in the 2008 book and 2012 movie The Silver Linings Playbook?",
+          answer: "Philadelphia Eagles"
+          }
+        },
+        {
+          front: 1000,
+          back: {
+          text: "Which former TV critic for Entertainment Weekly wrote a thriller about a girl gone missing in 2012 that became a film in 2014?",
+          answer: "Gillian Flynn – the book is Gone Girl"
+          }
+        },
+        {
+          front: 1100,
+          back: {
+          text: "In The Devil Wears Prada, what is the name of the fashion magazine run by Meryl Streep’s character Miranda Priestly?",
+          answer: "Runway"
+          }
+        },
+        {
+          front: 1200,
+          back: {
+          text: "What is the name of the second book in The Hunger Games trilogy that was made into a film in 2013?",
+          answer: "Catching Fire"
           }
         },
       ]
     },
     {
-      title: "TV Game Shows",
+      title: "France",
       questions: [
         {
           front: 100,
           back: {
-            text: "What was the occupation of Nancy Zerg, who defeated the “unbeatable” Ken Jennings and his 74-game winning streak on Jeopardy in 2004?",
-            answer: "Real estate agent"
+            text: "In 2012, Paris police revealed that there was only one of which kind of traffic sign in the entire city?",
+            answer: "Stop sign"
           }
         },
         {
           front: 200,
           back: {
-            text: "What first host of Wheel of Fortune stayed only six years, while the present go-to-guy, Pat Sajak, has done 34 years as of 2015?",
-            answer: "Chuck Woolery"
+            text: "At which French sporting event do contestants go through more than 42,000 bottles of water every year?",
+            answer: "Tour de France"
           }
         },
         {
           front: 300,
           back: {
-            text: "The cost of a showcase on The Price is Right has never been guessed exactly since the daytime show premiered in 1972. True or false?",
-            answer: "False, in 2008 a guy nailed the $23,743 price tag for a billiard table, camper, and a karaoke machine."
+            text: "Which item of clothing was it technically illegal for Parisian women to wear until 2013? --- pantyhose, ankle socks, or pants?",
+            answer: "Pants – There were exceptions for women on horses or bicycles"
           }
         },
         {
           front: 400,
           back: {
-            text: "Which game show is on TV if you hear Steve Harvey say, “Survey says”?",
-            answer: "Family Feud, Steve has been the host since 2010"
+            text: "The Palme d’Or, or Golden Palm, is the highest award given at the annual film festival help in which city on the French Riviera?",
+            answer: "Cannes"
           }
         },
         {
           front: 500,
           back: {
-            text: "Who was hosting Who Wants to be a Millionaire in 2003, when the first woman to win one million dollars gave the correct final answer?",
-            answer: "Meredith Vieira, Nancy Christy was the winner"
+            text: "Which iconic French landmark was lit up with the colors of the South African flag in December 2013, after Nelson Mandela died?",
+            answer: "Eiffel Tower"
           }
         },
         {
           front: 600,
           back: {
-            text: "Which network in 2005 first aired Cash Cab, a quiz show that takes place in a New York City taxi cab with Ben Bailey as the driver and host?",
-            answer: "Discovery"
+            text: "Which historic French cabaret, home of the high-kicking cancan, celebrated its 125th birthday on October 6, 2014?",
+            answer: "Moulin Rouge"
           }
         },
       ]
     },
     {
-      title: "New Slogans",
+      title: "Christmas",
       questions: [
         {
           front: 100,
           back: {
-          	text: "What slogan replaced the 21-year old “Got Milk?” in 2014, in a new campaign featuring non-celebrities doing everyday activities?",
-          	answer: '"Milk Life"'
+          	text: "Who tries to stop Christmas from coming, by stealing all things of Christmas from “the Who’s”?",
+          	answer: 'The Grinch'
           }
         },
         {
           front: 200,
           back: {
-          	text: "What digital service, unveiled by Tim Cook in 2014, touts the slogan, “Your wallet. Without the wallet”?",
-          	answer: "Apple Pay"
+          	text: "What is the first name of Scrooge, the principal character of the novel, A Christmas Carol?",
+          	answer: "Ebenezer"
           }
         },
         {
           front: 300,
           back: {
-          	text: "Which lingerie company changed its tagline from “The Perfect Body” to “A Body for Every Body” in 2014, after a social media uproar?",
-          	answer: "Victoria’s Secret"
+          	text: "How many ghosts are there in A Christmas Carol?",
+          	answer: "Four"
           }
         },
         {
           front: 400,
           back: {
-          	text: "Which fast-food company changed its tagline to “Be Your Way” in 2014 to focus more on lifestyle than on customizing an order?",
-          	answer: "Burger King, the previous tag was “have it your way”"
+          	text: "Stollen is the traditional fruit cake of which country?",
+          	answer: "Germany"
           }
         },
         {
           front: 500,
           back: {
-          	text: "What two-tone treat changed its slogan from “America’s Favorite Cookie” to “Milk’s Favorite Cookie” in 2004?",
-          	answer: "Oreo"
+          	text: "What is a female turkey called?",
+          	answer: "A hen"
           }
         },
         {
           front: 600,
           back: {
-          	text: "What iconic American vehicle manufacturer began using the live-for-today tagline “Screw it. Let’s Ride” in print ads in 2008?",
-          	answer: "Harley-Davidson"
+          	text: "What is the name of the skin that hangs from a turkey’s neck?",
+          	answer: "Wattle"
           }
         },
+        {
+          front: 700,
+          back: {
+          	text: "How do you say “Merry Christmas” in Spanish?",
+          	answer: "Feliz Navidad"
+          }
+        },
+        {
+          front: 800,
+          back: {
+          	text: "What are two other names for Santa Claus?",
+          	answer: "Saint Nick and Kris Kringle"
+          }
+        },
+        
       ]
     },
     {
-      title: "TV Catch Phrases",
+      title: "Multiples!",
       questions: [
         {
           front: 100,
           back: {
-            text: "What catch phrase does Effie Trinket, the District 12 escort in the 2012 film The Hunger Games, send the tributes off with?",
-            answer: "“May the odds be ever in your favor”"
-          }
+            text: "Countries containing only one vowel, 'A', repeated, excluding 'Canada'",
+            answer: ["Ghana", "Japan", "Malta", "Qatar", "Rwanda", "Bahamas", "Kazakhstan", "Panama", "Madagascar"]
+          },
+          multiple: true,
         },
         {
           front: 200,
           back: {
-            text: "What word does humor-challenged Sheldon Cooper of The Big Bang Theory say after one of his lame jokes or pranks? ",
-            answer: "Bazinga!"
-          }
+            text: "Countries containing only one vowel, 'E' or 'O', repeated",
+            answer: ["Sweden", "Yemen", "Greece", "Seychelles", "Togo", "Comoros", "Kosovo", "Morocco"]
+          },
+          multiple: true,
         },
         {
           front: 300,
           back: {
-            text: "On what 2006-2011 series did Coach Taylor give the Dillon Panthers a pre-game rallying cry of “Clear eyes, full hearts, can’t lose!”?",
-            answer: "Friday Night Lights"
-          }
+          	text: "What are the names of Santa's reindeer?",
+          	answer: ["Rudolph", "Donner", "Comet", "Prancer", "Cupid", "Dasher", "Dancer", "Blitzen", "Vixen"]
+          },
+          multiple: true,
         },
         {
           front: 400,
           back: {
-            text: "Which How I Met Your Mother character’s favorite phrase is “It’s going to be legen… wait for it… dary! Legendary!”?",
-            answer: "Barney Stinson"
-          }
+            text: "Song titles with the word 'Santa' in it",
+            answer: ["Santa Claus Is Coming To Town", "Santa Baby", "Here Comes Santa Claus", "I Saw Mommy Kissing Santa Claus", "Must Be Santa", "Santa Claus Is Back In Town", "Back Door Santa", "Boogie Woogie Santa Claus", "Don't Shoot Me Santa"]
+          },
+          multiple: true,
         },
         {
           front: 500,
           back: {
-            text: "What supermodel host of America’s Next Top Model capitalized on her catch phrase with the 2012 app “Smize Yourself!”?",
-            answer: "Tyra Banks"
-          }
+            text: "Top 9 most played Holiday songs on the radio between 2011 and 2018 according to Billboard Music Charts",
+            answer: ["All I Want for Christmas Is You", "Rockin' Around the Christmas Tree", "The Christmas Song (Merry Christmas to You)", "Jingle Bell Rock", "Feliz Navidad", "A Holly Jolly Christmas", "It's the Most Wonderful Time of the Year", "Christmas Eve (Sarajevo 12/24)", "White Christmas"]
+          },
+          multiple: true,
         },
         {
           front: 600,
           back: {
-            text: "Which Friends actor played Joey, whose best pick-up line is “How you doin?”",
-            answer: "Matt LeBlanc"
-          }
+            text: "Most popular types of Chrismas Trees in Canada",
+            answer: ["Scotch Pine", "Balsam Fir", "White Spruce", "Douglas Fir", "Fraser Fir", "White Pine", "Noble Fir", "Colorado Blue Spruce"]
+          },
+          multiple: true,
         },
       ]
     }

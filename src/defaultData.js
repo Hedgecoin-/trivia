@@ -70,14 +70,6 @@ export const defaultPlayers = [
     score: 0,
   },
   {
-    name: 'Matt',
-    score: 0,
-  },
-  {
-    name: 'Yannick',
-    score: 0,
-  },
-  {
     name: 'Dicong',
     score: 0,
   },

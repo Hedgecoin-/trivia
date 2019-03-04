@@ -10,23 +10,23 @@ class PlayerAnswer extends Component {
   }
 
   handleWrong = (e) => {
-    const { name } = this.props;
+    const { name, multiple } = this.props;
     const { correct, answered } = this.state;
 
     e.stopPropagation();
 
     if(!correct && answered){
       this.setState({ correct: false, answered: false })
-      PlayerStore.setRoundStatus(name, 0)
+      PlayerStore.setRoundStatus(name, 0, multiple)
     }
     else {
       this.setState({ correct: false, answered: true })
-      PlayerStore.setRoundStatus(name, -1)
+      PlayerStore.setRoundStatus(name, -1, multiple)
     }
   }
 
   handleRight = () => {
-    const { name } = this.props;
+    const { name, multiple } = this.props;
     const { correct, answered } = this.state;
 
     let points = 2;
@@ -36,11 +36,11 @@ class PlayerAnswer extends Component {
 
     if(correct && answered){
       this.setState({ correct: false, answered: false })
-      PlayerStore.setRoundStatus(name, 0)
+      PlayerStore.setRoundStatus(name, 0, multiple)
     }
     else {
       this.setState({ correct: true, answered: true })
-      PlayerStore.setRoundStatus(name, points)
+      PlayerStore.setRoundStatus(name, points, multiple)
     }
 
 
